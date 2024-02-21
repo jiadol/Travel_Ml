@@ -5,4 +5,4 @@ FROM python:3.11
 WORKDIR /app
 
 # 安装Python包
-RUN pip install --no-cache-dir requests numpy pandas torch scikit-learn tensorflow tsai seaborn
+RUN pip install --no-cache-dir requests numpy pandas torch scikit-learn tensorflow tsai seaborn notebook sqlalchemy statsmodels
