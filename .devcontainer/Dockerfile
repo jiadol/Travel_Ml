@@ -5,4 +5,6 @@ FROM python:3.11
 WORKDIR /app
 
 # 安装Python包
-RUN pip install --no-cache-dir requests numpy pandas torch scikit-learn tensorflow tsai seaborn notebook sqlalchemy statsmodels
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.backup && 
+    sudo sed -i '/^deb .*main/ s/$/ contrib non-free/' /etc/apt/sources.list &&
+    pip install --no-cache-dir requests numpy pandas torch scikit-learn tensorflow tsai seaborn notebook sqlalchemy statsmodels dtaidistance
