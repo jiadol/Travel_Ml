@@ -15,7 +15,7 @@ CREATE TABLE hk_immigration_sum_daliy (
 );
 
 -- 插入数据
-INSERT INTO hk_immigration_sum_daliy(日期, hk机场入境, cn机场入境, gl机场入境, 机场入境, 总计入境, hk机场出境, cn机场出境, gl机场出境, 机场出境, 总计出境, 总计出入境)
+INSERT INTO hk_immigration_sum_daily(日期, hk机场入境, cn机场入境, gl机场入境, 机场入境, 总计入境, hk机场出境, cn机场出境, gl机场出境, 机场出境, 总计出境, 总计出入境)
 SELECT 日期,
        SUM(CASE WHEN 出入境 = '入境' AND 管制站 = '机场' THEN 香港居民 ELSE 0 END) AS 'hk机场入境',
        SUM(CASE WHEN 出入境 = '入境' AND 管制站 = '机场' THEN 内地访客 ELSE 0 END) AS 'cn机场入境',
