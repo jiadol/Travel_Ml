@@ -1,5 +1,5 @@
 # 使用Python latest官方镜像
-FROM python:latest
+FROM python:3.11
 
 # 设置工作目录
 WORKDIR /ml
