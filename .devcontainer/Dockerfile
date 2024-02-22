@@ -1,8 +1,8 @@
-# 使用Python 3.11官方镜像
-FROM python:3.11
+# 使用Python latest官方镜像
+FROM python:latest
 
 # 设置工作目录
-WORKDIR /app
+WORKDIR /ml
 
 # 安装Python包
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.backup && 
