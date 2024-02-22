@@ -5,4 +5,4 @@ FROM python:3.11
 WORKDIR /ml
 
 # 安装Python包
-RUN pip install --no-cache-dir requests numpy pandas torch scikit-learn tensorflow tsai seaborn notebook sqlalchemy statsmodels dtaidistance
+RUN pip install --no-cache-dir requests numpy pandas torch scikit-learn tensorflow tsai seaborn notebook sqlalchemy statsmodels dtaidistance Pyarrow scipy pygrinder pypots
