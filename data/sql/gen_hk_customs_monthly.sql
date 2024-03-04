@@ -1,5 +1,5 @@
 -- 创建新表
-CREATE TABLE hk_customs_sum_monthly
+CREATE TABLE hk_customs_monthly
 (
     date                     DATE,
     HK_airport_entry         INTEGER,
@@ -13,7 +13,7 @@ CREATE TABLE hk_customs_sum_monthly
 );
 
 -- 插入数据
-INSERT INTO hk_customs_sum_monthly(date, HK_airport_entry, CN_airport_entry, global_airport_entry, airport_entry,
+INSERT INTO hk_customs_monthly(date, HK_airport_entry, CN_airport_entry, global_airport_entry, airport_entry,
                                  HK_airport_departure, CN_airport_departure, global_airport_departure,
                                  airport_departure)
 SELECT DATE(strftime('%Y-%m-01', date))                                                         AS 'date',
