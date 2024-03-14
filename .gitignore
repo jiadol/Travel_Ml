@@ -1,3 +1,4 @@
 .idea
 .vscode
+models/tmp*/*
 .DS_Store
