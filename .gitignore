@@ -2,3 +2,4 @@
 .vscode
 models/tmp*/*
 .DS_Store
+/notebooks/lightning_logs/
