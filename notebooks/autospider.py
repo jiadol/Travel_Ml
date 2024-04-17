@@ -113,7 +113,7 @@ class HotelSpider:
             df['uniqueid'] = self.name
             df.to_sql('spider_links', con=self.dbEngine, if_exists='replace', index=False)
         else:
-            df = pd.read_sql_query(f"SELECT * FROM spider_links where uniqueid='{self.name}'", self.dbEngine)
+            df = pd.read_sql_query(f"SELECT * FROM sh_spider where uniqueid='{self.name}'", self.dbEngine)
             self.taskList = df['url'].to_list()
 
     def step(self, url):
