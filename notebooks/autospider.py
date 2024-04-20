@@ -53,8 +53,23 @@ def get_pure_text(plain_html: str) -> list:
     return cleaned_texts
 
 
-class HotelSpider:
+class BaseSpider:
+    def __init__(self):
+        pass
+
+    def get_tasks(self, **kwargs):
+        pass
+
+    def step(self, url):
+        pass
+
+    def run(self):
+        pass
+
+
+class HotelSpider(BaseSpider):
     def __init__(self, db, refresh=False):
+        super().__init__()
         self.name = 'HotelSpider'
         self.taskList = []
         self.dbEngine = db
